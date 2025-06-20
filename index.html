@@ -1,51 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🛑 Stop the Rush to War</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    header, footer {
-      background: #f7f7f7;
-      padding: 1em;
-      text-align: center;
-    }
-    main {
-      padding: 1em;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    iframe {
-      width: 100%;
-      min-height: 500px;
-      border: none;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 16px;
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Rapid‑response civic microsite empowering Americans to demand a congressional vote before any war with Iran."
+    />
+
+    <title>🛑 Stop the Rush to War</title>
+
+    <!-- ----  Inline Utility Styles  ---- -->
+    <style>
+      :root {
+        --clr-bg: #ffffff;
+        --clr-primary: #cf1124; /* red‑stop color */
+        --clr-muted: #6b7280; /* tailwind slate‑500 */
+        --font-main: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
       }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>🛑 Stop the Rush to War</h1>
-  </header>
-  <main>
-    <p>I am the child of a veteran and I am speaking out against a new war with Iran. Before any military action, Congress must reassert its constitutional authority and give clear approval.</p>
-    <p>Take action now by texting <strong>RESIST</strong> to <strong>50409</strong>. You'll be guided through sending a message to your members of Congress.</p>
-    <section>
-      <iframe src="https://docs.google.com/forms/d/FORM_ID_HERE/viewform" title="Campaign form"></iframe>
-    </section>
-  </main>
-  <footer>
-    <p>Policy Publica – A Civic Platform in Development</p>
-  </footer>
-</body>
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-main);
+        line-height: 1.6;
+        background-color: var(--clr-bg);
+        color: #111827; /* slate‑900 */
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      header,
+      footer {
+        text-align: center;
+        padding: 1rem;
+      }
+
+      header {
+        background-color: var(--clr-primary);
+        color: #ffffff;
+      }
+
+      main {
+        flex: 1 0 auto;
+        width: 100%;
+        max-width: 48rem; /* 768px */
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+      }
+
+      p {
+        margin-block: 0.75rem;
+      }
+
+      .cta {
+        font-weight: 600;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.375rem;
+        background: var(--clr-primary);
+        color: #fff;
+        display: inline-block;
+        text-decoration: none;
+      }
+
+      iframe {
+        width: 100%;
+        min-height: 34rem; /* ~550px */
+        border: 0;
+        margin-top: 1rem;
+      }
+
+      footer {
+        background-color: #f9fafb; /* slate‑50 */
+        color: var(--clr-muted);
+        font-size: 0.9rem;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background-color: #111827;
+          color: #f3f4f6; /* slate‑100 */
+        }
+
+        header {
+          background-color: #b91c1c; /* red‑700 */
+        }
+
+        footer {
+          background-color: #1f2937;
+          color: #9ca3af;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ========  Banner / Headline  ======== -->
+    <header>
+      <h1>🛑 Stop the Rush to War</h1>
+    </header>
+
+    <!-- ========  Main Content  ======== -->
+    <main>
+      <!-- Personal Appeal  -->
+      <p>
+        My name is Jon, the child of a veteran who returned from the last Middle‑East conflict forever
+        changed. I refuse to let my own children inherit another open‑ended war. Before any shots are
+        fired at Iran, <strong>Congress must vote</strong>—that is the Constitution and the debt we owe
+        every military family.
+      </p>
+
+      <!-- Call‑to‑Action Block  -->
+      <p>
+        <a class="cta" href="sms:50409?&body=RESIST">📲 Text <strong>RESIST</strong> to 50409</a>
+        <br />Follow the prompts to message your senators and representative <em>right now</em>.
+      </p>
+
+      <!-- Google Form embed  -->
+      <iframe
+        src="https://docs.google.com/forms/d/FORM_ID_HERE/viewform?embedded=true"
+        loading="lazy"
+        title="Add your name"
+      ></iframe>
+
+      <p style="font-size: 0.875rem; color: var(--clr-muted)">
+        Your information is stored securely and used only for civic engagement updates. Unsubscribe
+        anytime.
+      </p>
+    </main>
+
+    <!-- ========  Footer  ======== -->
+    <footer>
+      Policy Publica – A Civic Platform in Development
+    </footer>
+  </body>
 </html>
